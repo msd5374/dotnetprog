@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\bin\Debug\firstprog.exe.config
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\bin\Debug\firstprog.exe
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\bin\Debug\firstprog.pdb
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\obj\Debug\firstprog.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\obj\Debug\firstprog.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\obj\Debug\firstprog.exe
+C:\Users\labuser\Documents\shubham_m\Day1\firstprog\obj\Debug\firstprog.pdb

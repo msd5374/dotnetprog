@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\bin\Debug\valuetype_struct.exe.config
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\bin\Debug\valuetype_struct.exe
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\bin\Debug\valuetype_struct.pdb
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\obj\Debug\valuetype_struct.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\obj\Debug\valuetype_struct.exe
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\obj\Debug\valuetype_struct.pdb
+C:\Users\labuser\Documents\shubham_m\Day_3\valuetype_struct\obj\Debug\valuetype_struct.csprojAssemblyReference.cache

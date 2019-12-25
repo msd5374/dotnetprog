@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\bin\Debug\reflect.exe.config
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\bin\Debug\reflect.exe
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\bin\Debug\reflect.pdb
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\obj\Debug\reflect.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\obj\Debug\reflect.exe
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\obj\Debug\reflect.pdb
+C:\Users\labuser\Documents\shubham_m\Day6\reflect\obj\Debug\reflect.csprojAssemblyReference.cache

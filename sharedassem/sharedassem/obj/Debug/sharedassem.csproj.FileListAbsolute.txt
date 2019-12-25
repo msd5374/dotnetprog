@@ -1,0 +1,6 @@
+C:\Users\labuser\Documents\shubham_m\sharedassem\sharedassem\bin\Debug\sharedassem.dll
+C:\Users\labuser\Documents\shubham_m\sharedassem\sharedassem\bin\Debug\sharedassem.pdb
+C:\Users\labuser\Documents\shubham_m\sharedassem\sharedassem\obj\Debug\sharedassem.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\sharedassem\sharedassem\obj\Debug\sharedassem.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\sharedassem\sharedassem\obj\Debug\sharedassem.dll
+C:\Users\labuser\Documents\shubham_m\sharedassem\sharedassem\obj\Debug\sharedassem.pdb

@@ -1,0 +1,10 @@
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\bin\Debug\shareass1.exe.config
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\bin\Debug\shareass1.exe
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\bin\Debug\shareass1.pdb
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\bin\Debug\sharedassem.dll
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\bin\Debug\sharedassem.pdb
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\obj\Debug\shareass1.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\obj\Debug\shareass1.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\obj\Debug\shareass1.csproj.CopyComplete
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\obj\Debug\shareass1.exe
+C:\Users\labuser\Documents\shubham_m\shareass1\shareass1\obj\Debug\shareass1.pdb

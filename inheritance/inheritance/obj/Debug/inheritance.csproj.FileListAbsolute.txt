@@ -1,0 +1,10 @@
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\bin\Debug\inheritance.exe.config
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\bin\Debug\inheritance.exe
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\bin\Debug\inheritance.pdb
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\obj\Debug\inheritance.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\obj\Debug\inheritance.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\obj\Debug\inheritance.exe
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\obj\Debug\inheritance.pdb
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\bin\Debug\accessspec.dll
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\bin\Debug\accessspec.pdb
+C:\Users\labuser\Documents\shubham_m\inheritance\inheritance\obj\Debug\inheritance.csproj.CopyComplete

@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\bin\Debug\generics1.exe.config
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\bin\Debug\generics1.exe
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\bin\Debug\generics1.pdb
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\obj\Debug\generics1.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\obj\Debug\generics1.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\obj\Debug\generics1.exe
+C:\Users\labuser\Documents\shubham_m\Day_3\generics1\obj\Debug\generics1.pdb

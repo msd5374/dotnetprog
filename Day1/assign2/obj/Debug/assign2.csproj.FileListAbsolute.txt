@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\bin\Debug\assign2.exe.config
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\bin\Debug\assign2.exe
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\bin\Debug\assign2.pdb
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\obj\Debug\assign2.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\obj\Debug\assign2.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\obj\Debug\assign2.exe
+C:\Users\labuser\Documents\shubham_m\Day1\assign2\obj\Debug\assign2.pdb

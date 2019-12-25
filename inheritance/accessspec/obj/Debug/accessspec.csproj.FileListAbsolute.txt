@@ -1,0 +1,6 @@
+C:\Users\labuser\Documents\shubham_m\inheritance\accessspec\bin\Debug\accessspec.dll
+C:\Users\labuser\Documents\shubham_m\inheritance\accessspec\bin\Debug\accessspec.pdb
+C:\Users\labuser\Documents\shubham_m\inheritance\accessspec\obj\Debug\accessspec.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\inheritance\accessspec\obj\Debug\accessspec.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\inheritance\accessspec\obj\Debug\accessspec.dll
+C:\Users\labuser\Documents\shubham_m\inheritance\accessspec\obj\Debug\accessspec.pdb

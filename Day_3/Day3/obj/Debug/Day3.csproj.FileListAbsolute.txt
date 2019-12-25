@@ -1,0 +1,6 @@
+C:\Users\labuser\Documents\shubham_m\Day_3\Day3\bin\Debug\Day3.exe.config
+C:\Users\labuser\Documents\shubham_m\Day_3\Day3\bin\Debug\Day3.exe
+C:\Users\labuser\Documents\shubham_m\Day_3\Day3\bin\Debug\Day3.pdb
+C:\Users\labuser\Documents\shubham_m\Day_3\Day3\obj\Debug\Day3.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day_3\Day3\obj\Debug\Day3.exe
+C:\Users\labuser\Documents\shubham_m\Day_3\Day3\obj\Debug\Day3.pdb

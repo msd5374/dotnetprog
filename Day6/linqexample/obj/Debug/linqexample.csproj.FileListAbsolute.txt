@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\bin\Debug\linqexample.exe.config
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\bin\Debug\linqexample.exe
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\bin\Debug\linqexample.pdb
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\obj\Debug\linqexample.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\obj\Debug\linqexample.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\obj\Debug\linqexample.exe
+C:\Users\labuser\Documents\shubham_m\Day6\linqexample\obj\Debug\linqexample.pdb

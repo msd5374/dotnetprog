@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\bin\Debug\langfeature.exe.config
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\bin\Debug\langfeature.exe
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\bin\Debug\langfeature.pdb
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\obj\Debug\langfeature.csprojAssemblyReference.cache
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\obj\Debug\langfeature.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\obj\Debug\langfeature.exe
+C:\Users\labuser\Documents\shubham_m\Day5\langfeature\obj\Debug\langfeature.pdb

@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\bin\Debug\assign_b.exe.config
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\bin\Debug\assign_b.exe
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\bin\Debug\assign_b.pdb
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\obj\Debug\assign_b.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\obj\Debug\assign_b.exe
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\obj\Debug\assign_b.pdb
+C:\Users\labuser\Documents\shubham_m\Day1\assign_b\obj\Debug\assign_b.csprojAssemblyReference.cache

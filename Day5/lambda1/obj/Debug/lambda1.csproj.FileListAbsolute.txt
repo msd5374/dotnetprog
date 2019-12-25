@@ -1,0 +1,7 @@
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\bin\Debug\lambda1.exe.config
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\bin\Debug\lambda1.exe
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\bin\Debug\lambda1.pdb
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\obj\Debug\lambda1.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\obj\Debug\lambda1.exe
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\obj\Debug\lambda1.pdb
+C:\Users\labuser\Documents\shubham_m\Day5\lambda1\obj\Debug\lambda1.csprojAssemblyReference.cache
