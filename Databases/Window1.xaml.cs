@@ -41,7 +41,7 @@ namespace Databases
                 cmdEmps.CommandText = "select * from Employees";
 
                 SqlDataReader drEmps = cmdEmps.ExecuteReader();
-                while(drEmps.Read())
+                while (drEmps.Read())
                 {
                     lstNames.Items.Add(drEmps["Name"]);
                     //lstNames.Items.Add(drEmps.GetString(1));
@@ -122,16 +122,16 @@ namespace Databases
                 cmdDeps.CommandType = CommandType.Text;
                 cmdDeps.CommandText = "select * from Departments";
                 SqlDataReader drDeps = cmdDeps.ExecuteReader();
-                
+
                 while (drDeps.Read())
                 {
                     lstNames.Items.Add(drDeps["DeptName"]);
                     cmdEmps.CommandText = "select * from Employees where DeptNo=" + drDeps["DeptNo"];
 
-                    SqlDataReader drEmps = cmdEmps.ExecuteReader();  
+                    SqlDataReader drEmps = cmdEmps.ExecuteReader();
                     while (drEmps.Read())
                     {
-                        lstNames.Items.Add("   "+ drEmps["Name"]);
+                        lstNames.Items.Add("   " + drEmps["Name"]);
                     }
                     drEmps.Close();
                 }
@@ -147,8 +147,8 @@ namespace Databases
             {
                 cn.Close();
             }
-
-
         }
+
+
     }
 }

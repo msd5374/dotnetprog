@@ -62,5 +62,43 @@ namespace Databases
             }
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SqlConnection cn1 = new SqlConnection();
+            cn1.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
+            try
+            {
+                cn1.Open();
+                SqlCommand fill1 = new SqlCommand();
+                fill1.Connection = cn1;
+                fill1.CommandType = CommandType.Text;
+                fill1.CommandText = "select * from Employees";
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                ds = new DataSet();
+
+                da.SelectCommand = fill1;
+                da.Fill(ds, "Emps"); //dataset ,any tablename    //fill and remove op
+
+                fill1.CommandText = "select * from Departments";
+                da.Fill(ds, "Deps");
+
+                dgEmps.ItemsSource = ds.Tables["Emps"].DefaultView;  //dgemps is gridname
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn1.Close();
+            }
+
+        }
     }
 }

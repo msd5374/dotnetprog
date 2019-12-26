@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Insert" HorizontalAlignment="Left" Margin="97,195,0,0" VerticalAlignment="Top" Width="75" Click="insert"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="427*"/>
+            <ColumnDefinition Width="365*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Insert" HorizontalAlignment="Left" Margin="97,195,0,0" VerticalAlignment="Top" Width="75" Click="insert" RenderTransformOrigin="0.683,-0.104"/>
         <Button Content="Delete" HorizontalAlignment="Left" Height="20" Margin="307,242,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_5"/>
 
         <Label x:Name="lblEmpNo" Content="EmpNo" HorizontalAlignment="Left" Margin="91,40,0,0" VerticalAlignment="Top"/>
@@ -19,11 +23,11 @@
         <Label x:Name="lblEmpNo_Copy3" Content="DeptNo" HorizontalAlignment="Left" Margin="91,148,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDeptNo" HorizontalAlignment="Left" Height="23" Margin="187,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Insert with Prepared statement" HorizontalAlignment="Left" Margin="205,195,0,0" VerticalAlignment="Top" Width="206" Click="Button_Click_1"/>
-        <Button Content="Insert with Stored Procedure" HorizontalAlignment="Left" Margin="459,195,0,0" VerticalAlignment="Top" Width="223" Click="Button_Click_2"/>
+        <Button Content="Insert with Stored Procedure" HorizontalAlignment="Left" Margin="31.609,195,0,0" VerticalAlignment="Top" Width="223" Click="Button_Click_2" Grid.Column="1"/>
         <Button Content="Transaction" HorizontalAlignment="Left" Margin="97,242,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click_3"/>
         <Button Content="ExecuteScalar" HorizontalAlignment="Left" Margin="108,290,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click_4"/>
         <Label x:Name="lblCount" Content="Label" HorizontalAlignment="Left" Margin="216,290,0,0" VerticalAlignment="Top"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="527,242,0,0" VerticalAlignment="Top" Width="75" Click="update"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="99.609,242,0,0" VerticalAlignment="Top" Width="75" Click="update" Grid.Column="1"/>
         <Button Content="ShowData" HorizontalAlignment="Left" Height="20" Margin="323,290,0,0" VerticalAlignment="Top" Width="88" Click="showdata"/>
 
     </Grid>

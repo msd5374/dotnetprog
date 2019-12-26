@@ -9,6 +9,7 @@
     <Grid>
         <DataGrid x:Name="dgEmps" HorizontalAlignment="Left" Height="282" Margin="80,45,0,0" VerticalAlignment="Top" Width="376"/>
         <Button Content="Fill" HorizontalAlignment="Left" Margin="608,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Fill1" HorizontalAlignment="Left" Height="47" Margin="590,105,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

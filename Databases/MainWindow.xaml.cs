@@ -279,6 +279,67 @@ namespace Databases
 
         }
 
-      
+        private void insert(object sender, RoutedEventArgs e)
+        {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
+            //cn.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=Vikram;User Id=sa;Password=sa";
+            try
+            {
+                cn.Open();
+
+                SqlCommand cmdInsert = new SqlCommand();
+                cmdInsert.Connection = cn;
+                cmdInsert.CommandType = CommandType.Text;
+                cmdInsert.CommandText = "insert into Employees values(@EmpNo, @DeptNo, @Basic, @Name)";  //uses prepare statement
+                //avoids sql injection
+                cmdInsert.Parameters.AddWithValue("@EmpNo", txtEmpNo.Text);
+                cmdInsert.Parameters.AddWithValue("@DeptNo", txtDeptNo.Text);
+                cmdInsert.Parameters.AddWithValue("@Name", txtName.Text);
+                cmdInsert.Parameters.AddWithValue("@Basic", txtBasic.Text);
+
+
+                cmdInsert.ExecuteNonQuery();
+                MessageBox.Show("ok");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
+        private void update(object sender, RoutedEventArgs e)
+        {
+            SqlConnection cn2 = new SqlConnection();
+            cn2.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=True";
+
+            try
+            {
+                cn2.Open();
+                SqlCommand cmdUpdate = new SqlCommand();
+                cmdUpdate.Connection = cn2;
+                cmdUpdate.CommandType = CommandType.Text;
+                cmdUpdate.CommandText = "update Employees set Name=@Name where EmpNo=@EmpNo";
+
+                cmdUpdate.Parameters.AddWithValue("@Name", txtName.Text);
+                cmdUpdate.Parameters.AddWithValue("@EmpNo", txtEmpNo.Text);
+
+                cmdUpdate.ExecuteNonQuery();
+                MessageBox.Show("record updated");
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+            finally
+            {
+                cn2.Close();
+            }
+        }
     }
 }
