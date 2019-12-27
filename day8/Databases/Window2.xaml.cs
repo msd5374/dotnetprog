@@ -39,7 +39,7 @@ namespace Databases
                 cmdEmps.CommandType = CommandType.Text;
                 cmdEmps.CommandText = "select * from Employees";
 
-                SqlDataAdapter da = new SqlDataAdapter();
+                SqlDataAdapter da = new SqlDataAdapter();  //provides the communication between the Dataset and the SQL database
                 ds = new DataSet();
 
                 da.SelectCommand = cmdEmps;
@@ -86,26 +86,45 @@ namespace Databases
                 cmdUpdate.Connection = cn;
                 cmdUpdate.CommandType = CommandType.Text;
                 cmdUpdate.CommandText = "update Employees set DeptNo=@DeptNo,Basic=@Basic,Name=@Name where EmpNo=@EmpNo";
-                //add the parameters
-                //SqlParameter p = new SqlParameter();
-                //p.ParameterName = "@Name";
-                ////p.Value = txtName.Text
-                //p.SourceColumn = "Name";
-                //p.SourceVersion = DataRowVersion.Current;
-                //cmdUpdate.Parameters.Add(p);
-
+               
                 cmdUpdate.Parameters.Add(new SqlParameter { ParameterName = "@EmpNo", SourceColumn = "EmpNo", SourceVersion = DataRowVersion.Original });
                 cmdUpdate.Parameters.Add(new SqlParameter { ParameterName = "@DeptNo", SourceColumn = "DeptNo", SourceVersion = DataRowVersion.Current });
                 cmdUpdate.Parameters.Add(new SqlParameter { ParameterName = "@Basic", SourceColumn = "Basic", SourceVersion = DataRowVersion.Current });
-
                 cmdUpdate.Parameters.Add(new SqlParameter { ParameterName = "@Name", SourceColumn = "Name", SourceVersion = DataRowVersion.Current });
+
+
+
+                SqlCommand cmdInsert = new SqlCommand();
+                cmdInsert.Connection = cn;
+                cmdInsert.CommandType = CommandType.Text;
+                cmdInsert.CommandText = "insert into Employees values(@EmpNo, @DeptNo, @Basic, @Name)";
+
+                cmdInsert.Parameters.Add(new SqlParameter { ParameterName = "@EmpNo", SourceColumn = "EmpNo", SourceVersion = DataRowVersion.Current });
+                cmdInsert.Parameters.Add(new SqlParameter { ParameterName = "@DeptNo", SourceColumn = "DeptNo", SourceVersion = DataRowVersion.Current });
+                cmdInsert.Parameters.Add(new SqlParameter { ParameterName = "@Basic", SourceColumn = "Basic", SourceVersion = DataRowVersion.Current });
+                cmdInsert.Parameters.Add(new SqlParameter { ParameterName = "@Name", SourceColumn = "Name", SourceVersion = DataRowVersion.Original });
+
+
+
+                SqlCommand cmdDelete = new SqlCommand();
+                cmdDelete.Connection = cn;
+                cmdDelete.CommandType = CommandType.Text;
+                cmdDelete.CommandText = "delete from Employees where EmpNo=@EmpNo";  //use original whenever there is a where clause
+
+
+                cmdDelete.Parameters.Add(new SqlParameter { ParameterName = "@EmpNo", SourceColumn = "EmpNo", SourceVersion = DataRowVersion.Current});
+                //above will be used for the adding multiple rows
+
+
+              // ds.Tables["Emps"].DefaultView.RowFilter = "EmpNO=" + txtEmpNo.Text;
 
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.UpdateCommand = cmdUpdate;
-                //da.InsertCommand = cmdInsert
-                //da.DeleteCommand = cmdDelete
+                da.InsertCommand = cmdInsert;
+                da.DeleteCommand = cmdDelete;
 
                 da.Update(ds, "Emps");
+               
 
 
 
@@ -149,6 +168,11 @@ namespace Databases
             ds.ReadXmlSchema("a.xsd");
             ds.ReadXml("a.xml", XmlReadMode.DiffGram);
             dgEmps.ItemsSource = ds.Tables["Emps"].DefaultView;
+        }
+
+        private void TxtDeptNo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
