@@ -10,6 +10,10 @@
         <DataGrid x:Name="dgEmps" HorizontalAlignment="Left" Height="282" Margin="80,45,0,0" VerticalAlignment="Top" Width="376"/>
         <Button Content="Fill" HorizontalAlignment="Left" Margin="608,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="Fill1" HorizontalAlignment="Left" Height="47" Margin="590,105,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_1"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="35" Margin="608,190,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click_2"/>
+        <Button Content="Filter DeptNo" HorizontalAlignment="Left" Height="39" Margin="608,266,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click_3"/>
+        <TextBox x:Name="txtDeptNo"   HorizontalAlignment="Left" Height="27" Margin="639,327,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74"/>
+        <Button Content="clearfilter" HorizontalAlignment="Left" Height="14" Margin="608,377,0,0" VerticalAlignment="Top" Width="127" Click="Button_Click_4"/>
 
     </Grid>
 </Window>
