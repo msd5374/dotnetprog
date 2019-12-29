@@ -14,20 +14,83 @@ namespace shubhammvc.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View();
+            List<Employee> emps = new List<Employee>();
+
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
+            try
+            {
+
+
+                cn.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Employees";  //uses prepare statement
+
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+
+                while (dr.Read())
+                {
+                    Employee ep = new Employee();
+
+                    ep.EmpNo = (int)dr["EmpNo"];
+                    ep.Name = dr["Name"].ToString();
+                    ep.Basic = (decimal)dr["Basic"];
+                    ep.DeptNo = (int)dr["DeptNo"];
+
+                    emps.Add(ep);
+                }
+            }
+           catch(Exception ex)
+            {
+
+            }
+            return View(emps);
         }
 
         // GET: Employees/Details/5
         public ActionResult Details(int id=0)
         {
+           
+                // TODO: Add insert logic here
 
-            //Employee e = new Employee();
-            // e.EmpNo = 1;
-            // e.Name = "shubham";
-            // e.Basic = 12021;
-            // e.DeptNo = 10;
-            //return View(e);
-            return View();
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
+            Employee ep = new Employee();
+
+            cn.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Employees where EmpNo=@EmpNo";  //uses prepare statement
+
+
+                cmd.Parameters.AddWithValue("@EmpNO",id);
+                SqlDataReader dr =cmd.ExecuteReader();
+
+
+                if(dr.Read())
+                {
+                    ep.EmpNo = id;
+                    ep.Name = dr["Name"].ToString();
+                    ep.Basic = (decimal)dr["Basic"];
+                    ep.DeptNo = (int)dr["DeptNo"];
+                return View(ep);
+                }
+                else
+            {
+                return View();
+            }
+              
+          
+
+
+            
         }
 
         // GET: Employees/Create
@@ -114,33 +177,58 @@ namespace shubhammvc.Controllers
         }
 
         // GET: Employees/Delete/5
-        public ActionResult Delete(int id=0)
+        [HttpGet]
+        public ActionResult Delete(int ID=0)
         {
-            return View();
+
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
+           Employee ep = new Employee();
+
+            cn.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Employees where EmpNo=@EmpNo";  //uses prepare statement
+
+
+            cmd.Parameters.AddWithValue("@EmpNo", ID);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+
+            if (dr.Read())
+            {
+                ep.EmpNo = ID;
+                ep.Name = dr["Name"].ToString();
+                ep.Basic = (decimal)dr["Basic"];
+                ep.DeptNo = (int)dr["DeptNo"];
+
+            }
+
+            cn.Close();
+            return View(ep);
+
         }
 
         // POST: Employees/Delete/5
         [HttpPost]
-        public ActionResult Delete(int Id,Employee e)
+        public ActionResult Delete(Employee ep1, int Id)
         {
+            // TODO: Add delete logic here
+            SqlConnection cn3 = new SqlConnection();
+            cn3.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
             try
             {
-                SqlConnection cn3 = new SqlConnection();
-                cn3.ConnectionString = @"Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=shubhamm;Integrated Security=true";
-
-
+              
                 cn3.Open();
                 SqlCommand cmdDelete = new SqlCommand();
                 cmdDelete.Connection = cn3;
                 cmdDelete.CommandType = CommandType.Text;  //three types:store procedure,preapare statment and tabledirect
-                cmdDelete.CommandText = "delete from Employees where empNo=@EmpNo";
+                cmdDelete.CommandText = "delete from Employees where EmpNo=@EmpNo";
                 cmdDelete.Parameters.AddWithValue("@EmpNo",Id);
 
                 cmdDelete.ExecuteNonQuery();
-
-
-
-                // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
             }
@@ -148,6 +236,11 @@ namespace shubhammvc.Controllers
             {
                 return View();
             }
+            finally
+            {
+                cn3.Close();
+            }
+
         }
     }
 }

@@ -54,10 +54,16 @@
         @using (Html.BeginForm()) {
             @Html.AntiForgeryToken()
     
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
-            </div>
+        <div class="form-actions no-color">
+            @Html.HiddenFor(a => a.EmpNo)
+            @Html.HiddenFor(a => a.Name)
+            @Html.HiddenFor(a => a.Basic)
+            @Html.HiddenFor(a => a.DeptNo)
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+
+            @Html.ActionLink("Back to List", "Index")
+
+        </div>
         }
     </div>
 </body>
