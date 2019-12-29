@@ -38,6 +38,8 @@ namespace WpfApp2.localhost {
         
         private System.Threading.SendOrPostCallback GetDataSetOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetUpdateOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -87,6 +89,9 @@ namespace WpfApp2.localhost {
         
         /// <remarks/>
         public event GetDataSetCompletedEventHandler GetDataSetCompleted;
+        
+        /// <remarks/>
+        public event GetUpdateCompletedEventHandler GetUpdateCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld1", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -201,6 +206,35 @@ namespace WpfApp2.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetUpdate", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetUpdate(System.Data.DataSet ds) {
+            object[] results = this.Invoke("GetUpdate", new object[] {
+                        ds});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetUpdateAsync(System.Data.DataSet ds) {
+            this.GetUpdateAsync(ds, null);
+        }
+        
+        /// <remarks/>
+        public void GetUpdateAsync(System.Data.DataSet ds, object userState) {
+            if ((this.GetUpdateOperationCompleted == null)) {
+                this.GetUpdateOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUpdateOperationCompleted);
+            }
+            this.InvokeAsync("GetUpdate", new object[] {
+                        ds}, this.GetUpdateOperationCompleted, userState);
+        }
+        
+        private void OnGetUpdateOperationCompleted(object arg) {
+            if ((this.GetUpdateCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetUpdateCompleted(this, new GetUpdateCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -310,6 +344,32 @@ namespace WpfApp2.localhost {
         private object[] results;
         
         internal GetDataSetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")]
+    public delegate void GetUpdateCompletedEventHandler(object sender, GetUpdateCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3761.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetUpdateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetUpdateCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

@@ -25,14 +25,21 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
-       
+        DataSet ds1;
 
         private void Btnfill_Click(object sender, RoutedEventArgs e)
         {
 
             localhost.WebService1 ob = new localhost.WebService1();
-            DataSet ds1 = ob.GetDataSet();
+           ds1 = ob.GetDataSet();
             dgrid.ItemsSource = ds1.Tables["Emps"].DefaultView;
+        }
+
+        private void Btnupdate_Click(object sender, RoutedEventArgs e)
+        {
+            localhost.WebService1 ob1 = new localhost.WebService1();
+            ds1 = ob1.GetUpdate(ds1);
+
         }
     }
 }

@@ -54,6 +54,34 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorld1SoapIn">
@@ -80,6 +108,12 @@
   <wsdl:message name="GetDataSetSoapOut">
     <wsdl:part name="parameters" element="tns:GetDataSetResponse" />
   </wsdl:message>
+  <wsdl:message name="GetUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdate" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="HelloWorld1">
       <wsdl:input message="tns:HelloWorld1SoapIn" />
@@ -96,6 +130,10 @@
     <wsdl:operation name="GetDataSet">
       <wsdl:input message="tns:GetDataSetSoapIn" />
       <wsdl:output message="tns:GetDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdate">
+      <wsdl:input message="tns:GetUpdateSoapIn" />
+      <wsdl:output message="tns:GetUpdateSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -136,6 +174,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetUpdate">
+      <soap:operation soapAction="http://tempuri.org/GetUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -168,6 +215,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetDataSet">
       <soap12:operation soapAction="http://tempuri.org/GetDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdate">
+      <soap12:operation soapAction="http://tempuri.org/GetUpdate" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
